@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos HTML</title>
+</head>
+<body>
+    <!-- Comentario-->
+    <!--Titulos en Heading h1 al h6-->
+    <h1 id="top">Titulo en h1</h1>
+    <h2>Titulo en h2</h2>
+    <h3>Titulo en h3</h3>
+    <h4>Titulo en h4</h4>
+    <h5>Titulo en h5</h5>
+    <h6>Titulo en h6</h6>
+    <br> <!--Salto de linea-->
+    <hr> <!--linea horizontal-->
+
+    <!--Párrafos-->
+    <!--etiqueta <b> (Bold)es para poner en negrita parte del texto-->
+    <!--etiqueta <i> (Italic) para poner en cursiva parte del texto-->
+    <!--etiqueta <u> (Underline) para subrayar parte del texto-->
+    <!--Se pueden utilizar todas juntas en una misma parte del texto-->
+    <p>
+        <b>BTS</b>(en hangul, 방탄소년단; romanización revisada del coreano, <i>Bangtan Sonyeondan</i>) es un grupo surcoreano formado en Seúl en 2010, que debutó el 13 de junio de 2013 bajo la compañía <u>Big Hit Music</u>.
+    </p>
+    <p>
+        Está compuesto por siete integrantes: <u><i><b>Jin, Suga, J-Hope, RM, Jimin, V y Jungkook</b></i></u>, quienes son los que coescriben y coproducen la mayor parte de su material discográfico. A pesar de haber sido creado con un estilo principalmente hip hop, ha llegado a incorporar una gran variedad de géneros en su repertorio musical.
+    </p>
+    <br><hr>
+    <!--Hipervinculo o Anchor-->
+    <a href="https://ibighit.com/bts/eng/"> Visite la Pagina oficial de BTS</a>
+    <br>
+    <a href="https://ibighit.com/bts/eng/" target ="_blank">  Visite la Pagina oficial de BTS</a>
+    
+    <!--Se pueden agregar otros atributos para elegir como abrir la nueva pestaña
+    blank= para abrir enlace en nueva pestaña-->
+    <br>
+    <!--Abrir pagina dentro de la misma ubicación-->
+    <a href="pagina2.html" target ="_blank">Click para ir a la Pagina 2</a>
+    
+    <br>
+    
+    <!--Navegar dentro de la página-->
+    <a href="elementos.html">Ir hacia arriba</a>
+    <br>
+    
+    <!--Imagenes-->
+    <img src="Assets/img/bts.webp" height="200" alt="bts"> <!--alt = alternativo, indica que el vinculo o ruta hacia la imagen no existe-->
+    <!--Al asignarle una altura (height) o anchura(width) automaticamente se ajusta la otra altura.
+    Solo se usa para las imagenes-->
+    <br>
+    <!--Añadiendo un enlace a una pagina-->
+    <a href="https://ibighit.com/bts/eng/" target ="_blank">
+        <img src="Assets/img/BTS_Logo.webp" width="100" alt="bts logo">
+    </a>
+
+    <!--Creacion de Listas-->
+    <!--Listas ordenadas (ol)-->
+    <h4>Integrantes de la banda</h4>
+    <ol> <!--ordered list-->
+        <li>Kim Namjoon</li> <!--list item-->
+        <li>Kim Seokjin</li>
+        <li>Min Yoongi</li>
+        <li>Jung Hoseok</li>
+        <li>Park Jimin</li>
+        <li>Kim Taehyung</li>
+        <li>Jeon Jungkook</li>
+    </ol>
+
+    <!--Listas desordenadas (ul)-->
+    <ul> <!--unordered list-->
+        <li>Kim Namjoon</li>
+        <li>Kim Seokjin</li>
+        <li>Min Yoongi</li>
+        <li>Jung Hoseok</li>
+        <li>Park Jimin</li>
+        <li>Kim Taehyung</li>
+        <li>Jeon Jungkook</li>
+    </ul>
+
+    <!--Union de ambas listas-->
+    <ol>
+        <li>Kim Namjoon</li>
+        <li>Rol en el grupo
+            <ul>
+                <li>Lider</li>
+                <li>Rapero</li>
+            </ul>
+        </li>
+        <li>Kim Seokjin</li>
+        <li>Min Yoongi</li>
+        <li>Jung Hoseok</li>
+        <li>Park Jimin</li>
+        <li>Kim Taehyung</li>
+        <li>Jeon Jungkook</li>
+    </ol>
+
+<!--Mas ejemplos de union de ambas listas-->
+<ul>
+        <li>lista grupos</li>
+        <li>
+            <ul>
+                <li>grupo 7
+                    <ul>
+                        <li>Luisa</li>
+                        <li>Jona</li>
+                        <li>Atenas</li>
+                        <li>Camilo</li>
+                    </ul>
+                </li>
+                <li>grupo 3</li>
+                <li>grupo 5</li>
+                <li>grupo 1</li>
+                <li>grupo 4</li>
+                <li>
+                    <ol>
+                        <li>Tere</li>
+                        <li>Michelin</li>
+                        <li>Carlangas</li>
+                        <li>Ivan</li>
+                    </ol>
+                </li>
+                <li>grupo 2</li>
+            </ul>
+        </li>
+    </ul>
+    <br><hr>
+
+    <!--Tablas filas y columnas-->
+    <!--table: thead: es el nombre para las columnas
+        tbody: para el contenido dentro de las columnas-->
+    
+        
+    <table>
+        <thead>
+            <tr> <!--table row-->
+                <th>id</th> <!--header cell-->
+                <th>nombre</th>
+                <th>email</th>
+                <th>password</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td> <!--table data-->
+                <td>Ivan</td>
+                <td>yo@yo.cl</td>
+                <td>12345</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tere</td>
+                <td>tere@tere.cl</td>
+                <td>54321</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Michelin</td>
+                <td>michel@jeje.cl</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Carlangas</td>
+                <td></td>
+                <td>cortesiciliano</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
