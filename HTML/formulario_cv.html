@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario CV
+    </title>
+</head>
+<body>
+    <!--Generar un formulario de curriculum
+        Agregar imagen
+        Con parrafos: la descripcion
+        Con un selector : añadir las habilidades blandas
+        Describir con listas no ordenadas: todos los Hobbys que uno tiene
+        con Checkbox: 4 caracteristicas que considero que uno domina mas
+        Boton de enviar
+    -->
+    <img src="Assets/img/yo.png" height="200" alt="Foto postulante">
+    <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Añade tu descripcion">Soy Ivan Zapata, tengo 26 años y estoy aprendiendo a programar a través de Generation.</textarea>
+    <br>
+    <h4>Habilidades Blandas</h4>
+    <select name="habilidades" id="habilidades" multiple>
+        <option value="1">Responsabilidad personal</option>
+        <option value="2">Mentalidad de crecimiento</option>
+        <option value="3">Orientacion al futuro</option>
+        <option value="4">Persistencia</option>
+        <option value="5">Comunicación</option>
+        <option value="6">Gestion del tiempo</option>
+        <option value="1">Trabajo en equipo</option>
+        <option value="3">Orientacion al detalle</option>
+    </select>
+    <br>
+    
+    <h4>Habilidades Tecnicas</h4>
+    <input type="checkbox" id="java" name="tecnico" value="1">
+    <label for="java">Java</label>
+    <br>
+    <input type="checkbox" id="springboot" name="tecnico" value="2">
+    <label for="springboot">Springboot</label>
+    <br>
+    <input type="checkbox" id="html" name="tecnico" value="3">
+    <label for="html">HTML</label>
+    <br>
+    <input type="checkbox" id="mysql" name="tecnico" value="4">
+    <label for="mysql">MySQL</label>
+    <br>
+    <input type="checkbox" id="javascript" name="tecnico" value="4">
+    <label for="javascript">JavaScript</label>
+
+    <br>
+    <h4>Hobbys</h4>
+    <ul> <!--unordered list-->
+        <li>Juegos de Mesa</li>
+        <li>Ver series</li>
+        <li>Jugar videojuegos</li>
+        <li>Ver peliculas</li>
+    </ul>
+
+    <br>
+    <input type="submit" value="Enviar">
+
+</body>
+</html>
