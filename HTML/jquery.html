@@ -20,9 +20,10 @@
         }                 //text permite capturar y modificar el texto entre las etiquetas
         );
         
-        var texto1 = $('#parrafo1').text(); //text permite capturar el texto entre las etiquetas
+        /*var texto1 = $('#parrafo1').text(); //text permite capturar el texto entre las etiquetas
         console.log(texto1);
         alert(texto1);
+        */
 
         //Funciones básicas de JQuery
         //Efectos
@@ -51,7 +52,7 @@
             $('#parrafo3').slideToggle();//se desliza hacia arriba y hacia abajo
         });
 
-        //Fades
+        //FADE
         $('#boton8').click(function(){
             $('#parrafo4').fadeIn(2000); //se muestra de a poco, se le puede agregar el tiempo en el que se va mostrando en milisegundos
         });
@@ -64,6 +65,45 @@
             $('#parrafo4').fadeToggle(2000);//se desvanece y lo muestra de a poco
         });
 
+        //MANIPULACION
+        $('#boton11').click(function(){
+            $('#parrafo5').after('<p class="p5"> parrafo after</p>'); //se agrega un elemento FUERA de otro, DESPUES del elemento referenciado
+            $('.p5').fadeOut(4000);
+            $('.p5').fadeIn(3000);
+        });
+
+        $('#boton12').click(function(){
+            $('#parrafo5').append('<p class="p5b"> parrafo append</p>'); //agrega un elemento DENTRO de otro (en este caso dentro del parrafo 5), pero DESPUES del texto
+        });
+
+        $('#boton13').click(function(){
+            $('#parrafo5').prepend('<p class="p5c"> parrafo prepend</p>');//agrega un elemento DENTRO de otro, pero ANTES del texto
+        });
+
+        $('#boton14').click(function(){
+            $('#parrafo5').before('<p class="p5d"> parrafo before</p>'); //agrega un elemento FUERA de otro, ANTES del texto
+        });
+
+        //ATTR (atributos): Agregar un atributo a una etiqueta html
+        $('#boton15').click(function(){
+            $('#parrafo5').attr('name', 'np5'); //Le añade el nombre np5 al parrafo 5
+            $('#parrafo5').attr('style', 'color:red; background-color:yellow; display:none');//se le añade un estilo luego de clickear el boton
+        });
+
+        //ESTILOS
+        $('#boton16').click(function(){
+            $('#parrafo6').addClass('text-success'); //le añade una clase al elemento
+            $('#parrafo6').addClass('fs-1'); //se van concatenando las clases añadidas
+        });   
+        
+        $('#boton17').click(function(){
+            $('#parrafo6').removeClass('fs-1'); //se remueve una clase
+        });
+
+        $('#boton18').click(function(){
+            $('#parrafo6').removeClass('text-success'); // *Bootstrap le añade el atributo important, por lo que hay que removerlo y añadirle el nuevo estilo de css para cambiarle el color
+            $('#parrafo6').css('color', 'blue'); //se añade el estilo de css a un elemento
+        });
         //Cierre de JQuery
         });
 
@@ -76,6 +116,8 @@
         <br>
         <button class="btn btn-primary" id="boton1">Click</button>
         <br><hr>
+
+        <h2>Efectos</h2>
         <p id="parrafo2"> esto es un texto para el parrafo 2</p>
         <button class="btn btn-secondary" id="boton2">Hide()</button>
         <button class="btn btn-secondary" id="boton3">Show()</button>
@@ -93,6 +135,22 @@
         <button class="btn btn-secondary" id="boton9">FadeOut()</button>
         <button class="btn btn-secondary" id="boton10">FadeToggle()</button>
         <br><hr>
+
+        <h2>Manipulacion</h2>
+        <p id="parrafo5">Manipular informacion del parrafo 5</p>
+        <button class="btn btn-secondary" id="boton11">After()</button>
+        <button class="btn btn-secondary" id="boton12">Append()</button>
+        <button class="btn btn-secondary" id="boton13">Prepend()</button>
+        <button class="btn btn-secondary" id="boton14">Before()</button>
+        <br><br>
+        <button class="btn btn-secondary" id="boton15">attr()</button>
+        <br><hr>
+
+        <h2>Estilos</h2>
+        <p id="parrafo6">Estilos al parrafo 6</p>
+        <button class="btn btn-secondary" id="boton16">AddClass()</button>
+        <button class="btn btn-secondary" id="boton17">RemoveClass()</button>
+        <button class="btn btn-secondary" id="boton18">Css()</button>
     </div>
     <!--CSS Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
